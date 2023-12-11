@@ -6,16 +6,16 @@
                     "test_1.fastq:md5,4161df271f9bfcd25d5845a1e220dbec"
                 ],
                 "1": [
-                    "versions.yml:md5,a2d5ce72baa8b303f25afb9cf094f683"
+                    "versions.yml:md5,7c265953bddf5eaf230bcd49fd349af9"
                 ],
                 "file": [
                     "test_1.fastq:md5,4161df271f9bfcd25d5845a1e220dbec"
                 ],
                 "versions": [
-                    "versions.yml:md5,a2d5ce72baa8b303f25afb9cf094f683"
+                    "versions.yml:md5,7c265953bddf5eaf230bcd49fd349af9"
                 ]
             }
         ],
-        "timestamp": "2023-10-18T12:37:21.987858"
+        "timestamp": "2023-12-11T19:09:50.385774055"
     }
 }
