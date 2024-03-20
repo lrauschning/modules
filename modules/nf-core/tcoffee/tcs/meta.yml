@@ -23,12 +23,17 @@ input:
   - meta:
       type: map
       description: |
-        Groovy Map containing sample information
+        Groovy Map containing sample information for the MSA. This is returned again in the `meta` output channel.
         e.g. [ id:'test', ... ]
   - msa:
       type: file
       description: fasta file containing the alignment to be evaluated. May be gzipped or uncompressed.
       pattern: "*.{aln,fa,fasta,fas}{.gz,}"
+  - meta2:
+      type: map
+      description: |
+        Groovy Map containing sample information for the alignment library. This is not returned.
+        e.g. [ id:'test', ... ]
   - lib:
       type: file
       description: lib file containing the alignment library of the given msa.
@@ -38,7 +43,7 @@ output:
   - meta:
       type: map
       description: |
-        Groovy Map containing sample information
+        Groovy Map containing sample information for the MSA.
         e.g. `[ id:'sample1', single_end:false ]`
   - versions:
       type: file

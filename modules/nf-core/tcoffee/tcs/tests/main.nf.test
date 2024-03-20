@@ -7,6 +7,7 @@ nextflow_process {
     tag "modules_nfcore"
     tag "tcoffee"
     tag "tcoffee/tcs"
+    tag "tcoffee/align"
     tag "pigz/compress"
 
     test("tcs - msa") {
@@ -15,7 +16,7 @@ nextflow_process {
             process {
                 """
                 input[0] = [
-                    [ id:'test'], 
+                    [ id:'test'],
                     file("https://raw.githubusercontent.com/nf-core/test-datasets/multiplesequencealign/testdata/setoxin.ref", checkIfExists: true)
                     ]
                 input[1] = [
@@ -48,7 +49,7 @@ nextflow_process {
 
                     """
                 }
-            }        
+            }
         }
 
         when {
@@ -88,14 +89,14 @@ nextflow_process {
                     input[3] = true
                     """
                 }
-            }        
+            }
         }
 
         when {
             process {
                 """
                 input[0] = [
-                    [ id:'test'], 
+                    [ id:'test'],
                     file("https://raw.githubusercontent.com/nf-core/test-datasets/multiplesequencealign/testdata/setoxin.ref", checkIfExists: true)
                     ]
                 input[1] = TCOFFEE_ALIGN.out.lib.map { it -> [[  id:'test' ], it[1]] }
